@@ -87,15 +87,6 @@
             #binding-cells = <0>;
             bindings = <&bt BT_CLR>, <&bt BT_CLR_ALL>;
         };
-
-        es_n_tilde: es_n_tilde {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ES_N_TILDE";
-            bindings = <&kp SEMI>, <&kp COLON>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
     keymap {
@@ -109,10 +100,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none            &kp PERIOD       &hrm RIGHT_ALT COMMA  &es_n_tilde    &kp P         &kp Y         &kp F             &kp G         &kp C          &hrm RIGHT_ALT H  &kp L             &none
-&caps_word_lock  &hrm LEFT_GUI A  &hrm LEFT_ALT O       &hrm LCTRL E   &hrm LSHFT U  &kp I         &kp D             &hrm RSHFT R  &hrm RCTRL T   &hrm LALT N       &hrm RIGHT_GUI S  &kp SQT
-&mo 7            &kp SLASH        &kp Q                 &kp J          &kp K         &kp X         &kp B             &kp M         &kp W          &kp V             &kp Z             &none
-                                                        &ltq 2 ESCAPE  &ltq 1 SPACE  &ltq 3 TAB    &ltq 5 BACKSPACE  &ltq 4 ENTER  &ltq 6 DELETE
+&none            &kp PERIOD       &kp COMMA        &kp SEMI       &kp P         &kp Y         &kp F             &kp G         &kp C          &kp H             &kp L             &none
+&caps_word_lock  &hrm LEFT_GUI A  &hrm LEFT_ALT O  &hrm LCTRL E   &hrm LSHFT U  &kp I         &kp D             &hrm RSHFT R  &hrm RCTRL T   &hrm LALT N       &hrm RIGHT_GUI S  &kp SQT
+&mo 7            &kp SLASH        &hrm RALT Q      &kp J          &kp K         &kp X         &kp B             &kp M         &kp W          &hrm RIGHT_ALT V  &kp Z             &none
+                                                   &ltq 2 ESCAPE  &ltq 1 SPACE  &ltq 3 TAB    &ltq 5 BACKSPACE  &ltq 4 ENTER  &ltq 6 DELETE
             >;
         };
 
