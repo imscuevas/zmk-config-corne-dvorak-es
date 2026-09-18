@@ -69,6 +69,15 @@
             require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
         };
+
+        caps_word_lock: caps_word_lock {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CAPS_WORD_LOCK";
+            bindings = <&kp CAPSLOCK>, <&caps_word>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -82,10 +91,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none         &kp PERIOD       &hrm RIGHT_ALT COMMA  &kp SEMI       &kp P         &kp Y         &kp F          &kp G         &kp C         &hrm RIGHT_ALT H  &kp L             &none
-&kp CAPSLOCK  &hrm LEFT_GUI A  &hrm LEFT_ALT O       &hrm LCTRL E   &hrm LSHFT U  &kp I         &kp D          &hrm RSHFT R  &hrm RCTRL T  &hrm LALT N       &hrm RIGHT_GUI S  &kp SQT
-&mo 5         &kp SLASH        &kp Q                 &kp J          &kp K         &kp X         &kp B          &kp M         &kp W         &kp V             &kp Z             &none
-                                                     &ltq 2 ESCAPE  &ltq 1 SPACE  &ltq 3 TAB    &kp BACKSPACE  &ltq 4 ENTER  &kp DELETE
+&none            &kp PERIOD       &hrm RIGHT_ALT COMMA  &kp SEMI       &kp P         &kp Y         &kp F             &kp G         &kp C         &hrm RIGHT_ALT H  &kp L             &none
+&caps_word_lock  &hrm LEFT_GUI A  &hrm LEFT_ALT O       &hrm LCTRL E   &hrm LSHFT U  &kp I         &kp D             &hrm RSHFT R  &hrm RCTRL T  &hrm LALT N       &hrm RIGHT_GUI S  &kp SQT
+&mo 6            &kp SLASH        &kp Q                 &kp J          &kp K         &kp X         &kp B             &kp M         &kp W         &kp V             &kp Z             &none
+                                                        &ltq 2 ESCAPE  &ltq 1 SPACE  &ltq 3 TAB    &ltq 5 BACKSPACE  &ltq 4 ENTER  &kp DELETE
             >;
         };
 
@@ -122,6 +131,15 @@
 &none  &kp LBKT              &kp N4  &kp N5     &kp N6  &kp RBKT           &none  &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI  &none
 &none  &kp NON_US_BACKSLASH  &kp N1  &kp N2     &kp N3  &kp GRAVE          &none  &none      &kp COMMA  &kp DOT   &kp FSLH  &none
                                      &kp EQUAL  &kp N0  &kp MINUS          &none  &none      &none
+            >;
+        };
+
+        sym {
+            bindings = <
+&none  &kp RA(APOS)         &kp LS(N7)  &kp LS(N8)     &kp LS(N9)  &kp RA(NON_US_HASH)    &none  &none      &none      &kp RALT  &none     &none
+&none  &kp RA(LBKT)         &kp LS(N4)  &kp LS(N5)     &kp LS(N6)  &kp RA(RBKT)           &none  &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI  &none
+&none  &kp LS(NON_US_BSLH)  &kp LS(N1)  &kp LS(N2)     &kp LS(N3)  &kp RA(GRAVE)          &none  &none      &none      &none     &none     &none
+                                        &kp LS(EQUAL)  &kp LS(N0)  &kp LS(MINUS)          &none  &none      &none
             >;
         };
 
