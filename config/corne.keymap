@@ -10,10 +10,11 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
+&caps_word {
+    continue-list = <MINUS UNDERSCORE QUOTE>;
+};
+
 / {
-    &caps_word {
-        continue-list = <MINUS UNDERSCORE QUOTE>;
-    };
 
     behaviors {
         bt_0: bt_0 {
