@@ -11,6 +11,10 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    &caps_word {
+        continue-list = <MINUS UNDERSCORE QUOTE>;
+    };
+
     behaviors {
         bt_0: bt_0 {
             compatible = "zmk,behavior-tap-dance";
