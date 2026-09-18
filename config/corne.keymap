@@ -10,7 +10,9 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&caps_word { continue-list = <BACKSPACE DELETE SLASH SEMI>; };
+&caps_word {
+    continue-list = <BACKSPACE DELETE SLASH SEMI>;
+};
 
 / {
     behaviors {
