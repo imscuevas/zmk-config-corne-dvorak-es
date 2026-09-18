@@ -134,10 +134,10 @@
 
         nav {
             bindings = <
-&bootloader_guarded  &reset_guarded  &kp RALT  &none      &none      &none    &kp LC(Z)       &kp LC(V)       &kp LC(C)     &kp LC(X)  &kp LC(Y)   &none
-&none                &kp LGUI        &kp LALT  &kp LCTRL  &kp LSHFT  &none    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp INSERT  &none
-&none                &none           &none     &none      &none      &none    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &none       &none
-                                               &none      &none      &none    &kp BSPC        &kp ENTER       &kp DELETE
+&bootloader_guarded  &reset_guarded  &none          &none      &none      &none    &kp LC(Z)       &kp LC(V)       &kp LC(C)     &kp LC(X)  &kp LC(Y)   &none
+&none                &kp LGUI        &kp LALT       &kp LCTRL  &kp LSHFT  &none    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp INSERT  &none
+&none                &none           &kp RIGHT_ALT  &none      &none      &none    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &none       &none
+                                                    &none      &none      &none    &kp BSPC        &kp ENTER       &kp DELETE
             >;
         };
 
@@ -152,19 +152,19 @@
 
         media {
             bindings = <
-&none  &none         &kp RALT  &none      &none      &none    &none       &kp C_BRI_DN      &kp C_BRI_UP  &none       &none         &bt_clr_all
-&none  &kp LEFT_GUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &kp C_PREV  &kp C_VOL_DN      &kp C_VOL_UP  &kp C_NEXT  &out OUT_TOG  &none
-&none  &none         &none     &none      &none      &none    &bt_0       &bt_1             &bt_2         &bt_3       &bt_4         &none
-                               &none      &none      &none    &kp C_STOP  &kp C_PLAY_PAUSE  &kp C_MUTE
+&none  &none         &none          &none      &none      &none    &none       &kp C_BRI_DN      &kp C_BRI_UP  &none       &none         &bt_clr_all
+&none  &kp LEFT_GUI  &kp LALT       &kp LCTRL  &kp LSHFT  &none    &kp C_PREV  &kp C_VOL_DN      &kp C_VOL_UP  &kp C_NEXT  &out OUT_TOG  &none
+&none  &none         &kp RIGHT_ALT  &none      &none      &none    &bt_0       &bt_1             &bt_2         &bt_3       &bt_4         &none
+                                    &none      &none      &none    &kp C_STOP  &kp C_PLAY_PAUSE  &kp C_MUTE
             >;
         };
 
         mouse {
             bindings = <
-&none  &none     &kp RALT  &none      &none      &none    &kp LC(Z)       &kp LC(V)       &kp LC(C)     &kp LC(X)        &kp LC(Y)  &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp MB4   &none
-&none  &none     &none     &none      &none      &none    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &mkp MB5   &none
-                           &none      &none      &none    &mkp RCLK       &mkp LCLK       &mkp MCLK
+&none  &none     &none          &none      &none      &none    &kp LC(Z)       &kp LC(V)       &kp LC(C)     &kp LC(X)        &kp LC(Y)  &none
+&none  &kp LGUI  &kp LALT       &kp LCTRL  &kp LSHFT  &none    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp MB4   &none
+&none  &none     &kp RIGHT_ALT  &none      &none      &none    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &mkp MB5   &none
+                                &none      &none      &none    &mkp RCLK       &mkp LCLK       &mkp MCLK
             >;
         };
 
@@ -179,19 +179,19 @@
 
         sym {
             bindings = <
-&none  &kp RA(APOS)         &kp LS(N7)  &kp LS(N8)     &kp LS(N9)  &kp RA(NON_US_HASH)    &none  &none      &none      &kp RALT  &none     &none
-&none  &kp RA(LBKT)         &kp LS(N4)  &kp LS(N5)     &kp LS(N6)  &kp RA(RBKT)           &none  &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI  &none
-&none  &kp LS(NON_US_BSLH)  &kp LS(N1)  &kp LS(N2)     &kp LS(N3)  &kp RA(GRAVE)          &none  &none      &none      &none     &none     &none
+&none  &kp RA(APOS)         &kp LS(N7)  &kp LS(N8)     &kp LS(N9)  &kp RA(NON_US_HASH)    &none  &none      &none      &none          &none     &none
+&none  &kp RA(LBKT)         &kp LS(N4)  &kp LS(N5)     &kp LS(N6)  &kp RA(RBKT)           &none  &kp RSHFT  &kp RCTRL  &kp LALT       &kp RGUI  &none
+&none  &kp LS(NON_US_BSLH)  &kp LS(N1)  &kp LS(N2)     &kp LS(N3)  &kp RA(GRAVE)          &none  &none      &none      &kp RIGHT_ALT  &none     &none
                                         &kp LS(EQUAL)  &kp LS(N0)  &kp LS(MINUS)          &none  &none      &none
             >;
         };
 
         fun {
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8      &kp F9     &trans     &trans  &trans     &trans     &kp RALT  &trans    &trans
-&trans  &kp F11  &kp F4  &kp F5      &kp F6     &trans     &trans  &kp RSHFT  &kp RCTRL  &kp LALT  &kp RGUI  &trans
-&trans  &kp F10  &kp F1  &kp F2      &kp F3     &trans     &trans  &trans     &trans     &trans    &trans    &trans
-                         &kp C_MENU  &kp SPACE  &kp TAB    &trans  &trans     &trans
+&none  &kp F12  &kp F7  &kp F8      &kp F9     &none      &none  &none      &none      &none          &none     &none
+&none  &kp F11  &kp F4  &kp F5      &kp F6     &none      &none  &kp RSHFT  &kp RCTRL  &kp LALT       &kp RGUI  &none
+&none  &kp F10  &kp F1  &kp F2      &kp F3     &none      &none  &none      &none      &kp RIGHT_ALT  &none     &none
+                        &kp C_MENU  &kp SPACE  &kp TAB    &none  &none      &none
             >;
         };
     };
