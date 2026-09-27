@@ -125,10 +125,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none            &kp PERIOD       &kp COMMA        &kp SEMI       &kp P         &kp Y         &kp F             &kp G         &kp C          &kp H             &kp L             &none
-&caps_word_lock  &hrm LEFT_GUI A  &hrm LEFT_ALT O  &hrm LCTRL E   &hrm LSHFT U  &kp I         &kp D             &hrm RSHFT R  &hrm RCTRL T   &hrm LALT N       &hrm RIGHT_GUI S  &kp SQT
-&none            &hrml 2 SLASH    &hrm RALT Q      &kp J          &kp K         &kp X         &kp B             &kp M         &kp W          &hrm RIGHT_ALT V  &hrml 2 Z         &none
-                                                   &ltq 3 ESCAPE  &ltq 1 SPACE  &ltq 4 TAB    &ltq 6 BACKSPACE  &ltq 5 ENTER  &ltq 7 DELETE
+&none            &hrml 2 PERIOD   &hrm RIGHT_ALT COMMA  &kp SEMI       &kp P         &kp Y         &kp F             &kp G         &kp C          &hrm RIGHT_ALT H  &hrml 2 L         &kp MINUS
+&caps_word_lock  &hrm LEFT_GUI A  &hrm LEFT_ALT O       &hrm LCTRL E   &hrm LSHFT U  &kp I         &kp D             &hrm RSHFT R  &hrm RCTRL T   &hrm LALT N       &hrm RIGHT_GUI S  &kp SQT
+&none            &kp SLASH        &kp Q                 &kp J          &kp K         &kp X         &kp B             &kp M         &kp W          &kp V             &kp Z             &none
+                                                        &ltq 3 ESCAPE  &ltq 1 SPACE  &ltq 4 TAB    &ltq 6 BACKSPACE  &ltq 5 ENTER  &ltq 7 DELETE
             >;
         };
 
